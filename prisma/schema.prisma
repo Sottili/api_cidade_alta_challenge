@@ -1,0 +1,16 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model badges {
+  id String @id @default(uuid())
+  slug String
+  name String
+  image String
+}
+
