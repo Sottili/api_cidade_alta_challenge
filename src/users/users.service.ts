@@ -2,16 +2,14 @@ import { Injectable } from '@nestjs/common';
 import { PrismaService } from 'prisma/prisma.service';
 
 @Injectable()
-export class BadgesService {
+export class UsersService {
   constructor(private prisma: PrismaService) {}
   findAll() {
-    return this.prisma.badges.findMany();
+    return this.prisma.user.findMany();
   }
-  findOne(id: number) {
-    return this.prisma.badges.findUnique({
-      where: {
-        id: `${id}`,
-      },
+  createUser(data) {
+    return this.prisma.user.create({
+      data: data,
     });
   }
 }

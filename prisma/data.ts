@@ -11,7 +11,7 @@ async function load() {
     await prisma.$disconnect();
   }
 
-  await prisma.$executeRaw`INSERT INTO badges(id, slug, name, image) VALUES
+  await prisma.$executeRaw`INSERT INTO public.Badges(id_badge, slug, name, image) VALUES
   ('1','cda','Cidade Alta','https://cidadealtarp.com/imagens/challenge/cidade-alta.png'),
   ('2', 'cda-valley','Cidade Alta Valley','https://cidadealtarp.com/imagens/challenge/cidade-alta-valley.png'),
   ('3', 'policia','Policia do Cidade Alta','https://cidadealtarp.com/imagens/challenge/policia.png'),
@@ -22,6 +22,9 @@ async function load() {
   ('8', 'hiena','Hiena','https://cidadealtarp.com/imagens/challenge/hiena.png'),
   ('9', 'gato','Gato','https://cidadealtarp.com/imagens/challenge/gato.png'),
   ('10', 'urso','Urso','https://cidadealtarp.com/imagens/challenge/urso.png');`;
+
+  await prisma.$executeRaw`INSERT INTO public.User(id_user, email, password) VALUES
+  ('1', 'felipe@email.com', '123456');`;
 }
 
 load();

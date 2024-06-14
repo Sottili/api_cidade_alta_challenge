@@ -5,12 +5,25 @@ generator client {
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
+  relationMode = "prisma"
 }
 
 model badges {
-  id String @id @default(uuid())
-  slug String
+  id_badge String @id @default(uuid())
+  slug String 
   name String
   image String
+  user user @relation(fields: [slug], references: [id_user])
+
+  @@index([slug])
 }
+
+model user {
+  id_user String @id @default(uuid())
+  email String
+  password String
+  badges badges[]
+}
+
+
 
