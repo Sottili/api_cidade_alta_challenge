@@ -50,7 +50,7 @@ export class UsersController {
       res.status(HttpStatus.BAD_REQUEST).send(e);
     }
   }
-  @Post('badges/:idUser')
+  @Post('badges/:id')
   async recoveryBadgesUser(
     @Param() params: any,
     @Res() res: Response,
@@ -63,7 +63,7 @@ export class UsersController {
 
       if (tokenVerify !== null) {
         const recoveryBadgesToUser = this.usersService.recoveryBadges(
-          params.idUser,
+          params.id,
           body.slug,
         );
         return await res.status(HttpStatus.OK).send(recoveryBadgesToUser);
