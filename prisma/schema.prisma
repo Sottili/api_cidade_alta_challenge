@@ -8,7 +8,7 @@ datasource db {
 }
 
 model badges {
-  id_badge     String         @id 
+  id_badge     Int         @id @default(autoincrement()) 
   slug         String
   name         String
   image        String
