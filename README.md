@@ -59,7 +59,7 @@ User Routes
 | <kbd>GET /users/create</kbd>     | create users
 | <kbd>GET /users/badges/:id</kbd>    | returns the badges belonging to a user
 | <kbd>POST /users/badges/:id</kbd>     | recovers a badge for that user
-| <kbd>DELETE /users/badges/:id</kbd>     | delte a badge for that user
+| <kbd>DELETE /users/badges/:id</kbd>     | delete a badge for that user
 | <kbd>GET /users/badges</kbd>    | returns the badges of all users
 
 Auth Route
