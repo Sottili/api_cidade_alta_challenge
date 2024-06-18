@@ -37,8 +37,6 @@ git clone https://github.com/Sottili/api_cidade_alta_challenge
 
 <h3>Starting</h3>
 
-After clone the project, use below command lines to execute.
-
 ```bash
 cd project-name
 docker compose up
