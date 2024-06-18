@@ -43,6 +43,8 @@ After clone the project, use below command lines to execute.
 cd project-name
 docker compose up
 npm i (install dependencies)
+create .env file
+write DATABASE_URL = 'Your database URL postgres' 
 npm run start (to execute this project)
 ```
 
