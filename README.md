@@ -1,73 +1,92 @@
+<h1 align="center" style="font-weight: bold;">Badges API - Cidade Alta Challenge 💻</h1>
+
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
+    <b>System to Badges API</b>
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+<h2 id="technologies">💻 Technologies</h2>
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+- Typescript
+- PostgreSQL
+- NestJS
+- Bcrypt
+- JsonWebToken
+- PrismaORM
+- NodeJS
 
-## Description
+<h2 id="started">🚀 Getting started</h2>
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+How to run this project locally.
 
-## Installation
+<h3>Prerequisites</h3>
 
-```bash
-$ npm install
-```
+Prerequisites to run project:
 
-## Running the app
+- [NodeJS](https://nodejs.org/)
+- [Git](https://git-scm.com/)
+- [Docker](https://www.docker.com/get-started/)
+- [PostgreSQL 16.2](https://www.postgresql.org/download/)
+
+<h3>Cloning</h3>
+
+How to clone project
 
 ```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+git clone https://github.com/Sottili/api_cidade_alta_challenge
 ```
 
-## Test
+<h3>Starting</h3>
+
+After clone the project, use below command lines to execute.
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+cd project-name
+docker compose up
+npm i (install dependencies)
+npm run start (to execute this project)
 ```
 
-## Support
+<h2 id="routes">📍 API Endpoints</h2>
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+Main routes of API, and what are their expected request bodies.
 
-## Stay in touch
+User Routes
+​
+| route               | description                                          
+|----------------------|-----------------------------------------------------
+| <kbd>GET /users/create</kbd>     | create users
+| <kbd>GET /users/badges/:id</kbd>    | returns the badges belonging to a user
+| <kbd>POST /users/badges/:id</kbd>     | recovers a badge for that user
+| <kbd>DELETE /users/badges/:id</kbd>     | delte a badge for that user
+| <kbd>GET /users/badges</kbd>    | returns the badges of all users
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+Auth Route
 
-## License
+| route               | description                                          
+|----------------------|-----------------------------------------------------
+| <kbd>POST /auth/login</kbd>     | login user
 
-Nest is [MIT licensed](LICENSE).
+Badges Routes
+
+| route               | description                                          
+|----------------------|-----------------------------------------------------
+| <kbd>GET /badges</kbd>     | return all badges
+| <kbd>GET /badges/name</kbd>     | returns the badge corresponding to the name passed
+| <kbd>GET /badges/slug</kbd>     | returns a specific slug
+
+<h2 id="colab">🤝 Collaborators</h2>
+
+Thanks to contribute this project!
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="#">
+        <img src="https://avatars.githubusercontent.com/u/91507688?v=4" width="100px;" alt="Filipe Sottili Profile Picture"/><br>
+        <sub>
+          <b>Filipe Sottili</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
