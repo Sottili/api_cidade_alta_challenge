@@ -1,7 +1,7 @@
 <h1 align="center" style="font-weight: bold;">Badges API - Cidade Alta Challenge 💻</h1>
 
 <p align="center">
-    <b>System to Bages API</b>
+    <b>System to Badges API</b>
 </p>
 
 <h2 id="technologies">💻 Technologies</h2>
